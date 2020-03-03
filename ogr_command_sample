@@ -1,0 +1,56 @@
+ogr2ogr –f "MySQL" MySQL:mv_site_suitability,host=127.0.0.1,user=root, password=root Bus_Routes.shp  -nln bus_routes -update -overwrite -lco engine=MYISAM.
+
+ogr2ogr MySQL:mv_site_suitability,host=127.0.0.1,user=root,password=root Bus_Routes.shp  -nln bus_routes2 -update -overwrite -lco "GEOM_TYPE=geometry"
+
+ogr2ogr -f MySQL:mv_site_suitability,host=127.0.0.1,user=mvc_db_admin "MVC_Roads_ferryroutes.shp" -s_srs "EPSG:26986" -t_srs "EPSG:4326" -overwrite -lco "GEOM_TYPE=geometry" -lco "GEOM_NAME=geog4326" -nln "MVC_Roads_Ferry"
+
+ogr2ogr MySQL:mv_site_suitability,host=127.0.0.1,user=root,password=root Bus_Routes.shp  -nln bus_routes2 -update -overwrite
+
+
+
+ogr2ogr -f MySQL:mvc_suitability,host=127.0.0.1,user=root,password=root MVC_Roads_ferryroutes.shp  -nln MVC_Roads_Ferry -update -overwrite
+
+ogr2ogr MySQL:mv_site_suitability,host=127.0.0.1,user=root MVC_Roads_ferryroutes.shp  -nln MVC_Roads_Ferry -update -overwrite
+
+ogr2ogr -f MySQL mvc_suitability,user=root MVC_Roads_ferryroutes.shp -s_srs "EPSG:26986" -t_srs "EPSG:4326" -overwrite -lco "GEOM_TYPE=geometry" -lco "GEOM_NAME=geog4326" -nln MVC_Roads_Ferry
+
+
+
+ogr2ogr -f MySQL mvc_suitability,user=root MVC_Roads_ferryroutes.shp -nln MVC_Roads_Ferry -update -overwrite
+   -lco GEOMETRY_NAME=SHAPE2 
+
+   7e62edee720d931e84bd9007b6dd4a29e8ce5b48
+
+   echo 'export HOMEBREW_GITHUB_API_TOKEN=7e62edee720d931e84bd9007b6dd4a29e8ce5b48' >> ~/.zshrc
+
+
+ogr2ogr -f MySQL MySQL:mv_suitability,user=root,password= MVC_Roads_ferryroutes.shp -nln MVC_Roads_Ferry -overwrite
+
+
+ogr2ogr MySQL:mvc_site_suitability,host=127.0.0.1,user=root,password= MVC_Roads_ferryroutes.shp  -nln ferry_routes -update -overwrite -lco "GEOM_TYPE=geometry"
+
+ogr2ogr -f MySQL mvc_site_suitability,host=127.0.0.1,user=root,password= MVC_Roads_ferryroutes.shp  -nln ferry_routes -update -overwrite -lco "GEOM_TYPE=geometry"
+
+
+
+If the setup breaks (most likely due to MySQL):
+brew remove gdal
+brew remove MySQL
+brew cleanup
+
+(see: https://gist.github.com/vitorbritto/0555879fe4414d18569d although all the steps may not be necessary, you should restart the computer)
+
+then run `brew install gdal --with-mysql`
+
+**** These Commands Work ****
+ogr2ogr -f MySQL MySQL:mvc_site_suitability,host=127.0.0.1,user=root MVC_Roads_ferryroutes.shp -nln ferry_routes -s_srs "EPSG:26986" -t_srs "EPSG:4326"
+ogr2ogr -f MySQL MySQL:mvc_site_suitability,host=127.0.0.1,user=root Open_Space_ConservationLand.shp -nln open_space -s_srs "EPSG:26986" -t_srs "EPSG:4326"
+ogr2ogr -f MySQL MySQL:mvc_site_suitability,host=127.0.0.1,user=root h2o_supply_protection_merge_mvi.shp -nln h20_supply_protection -s_srs "EPSG:26986" -t_srs "EPSG:4326"
+
+Other resources:
+https://www.gdal.org/drv_mysql.html
+https://freegistutorial.com/how-to-export-shapefile-to-mysql-database-using-ogr2ogr-tool/
+https://www.bostongis.com/PrinterFriendly.aspx?content_name=ogr_cheatsheet
+https://gis.stackexchange.com/questions/141440/shapefile-to-mysql-error-using-ogr2ogr
+https://www.gdal.org/ogr2ogr.html
+http://gis-lab.info/docs/gdal/gdal_ogr_user_docs.html#110_6

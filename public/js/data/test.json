@@ -1,0 +1,148 @@
+{
+"type": "FeatureCollection",
+	"features": [
+		
+  {
+	  "type": "Feature",
+	   "map_par_id": "11_12",
+		"geometry": {
+       
+       
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        -70.5614707205474,
+                        41.4042171140658
+                    ],
+                    [
+                        -70.5617658228544,
+                        41.4039349825164
+                    ],
+                    [
+                        -70.5621409281984,
+                        41.4041009664685
+                    ],
+                    [
+                        -70.5618398300259,
+                        41.4043858342746
+                    ],
+                    [
+                        -70.5614707205474,
+                        41.4042171140658
+                    ]
+                ]
+            ]
+        },
+        "bldg_val": 195200,
+        "res_score": 8,
+        "label": "R-20",
+        "sewered": null,
+        "townwater": null,
+        "sqfeet": 15534.1655054388,
+        "acres": 0.35661536973,
+        "av_score": 6,
+        "in_historic_district": null,
+        "in_overlay_zone": null,
+        "type": "Feature",
+        "properties": {
+            "info": "<p><strong>Address</strong>: 30 TWENTY FIRST ST S<br /><strong>Map & Lot ID</strong>: 11_12<br /><strong>Zone Code</strong>:89R-20<br /><strong>Assessed value</strong>: $469,000</p><p>Bedrooms: 1</p><h6>Parcel Scores</h6><table class='map_scores'><thead><tr><th>Score Factor</th><th class='score'>Score</th></tr></thead><tbody><tr><td>Zoning</td><td>8</td></tr><tr><td>Bedrooms</td><td>1</td></tr><tr><td>Vacant Lot</td><td>0</td></tr><tr><td>Sewer</td><td>0</td></tr><tr><td>Town Water</td><td>0</td></tr><tr><td><strong>Total Score</strong></td><td><strong>9</strong></td></tr></tbody></table>",
+            "zoning": 2
+        },
+        "details": {
+            "loc_id": "M_278454_795322",
+            "town_id": "89",
+            "address": "30 TWENTY FIRST ST S",
+            "map_lot_id": "11_12",
+            "zoning": "89R-20",
+            "total_val": 469000,
+            "acres": 0.35661536973
+        },
+        "scores": {
+            "zoning": 8,
+            "sewer": 0,
+            "townwater": 0,
+            "assessed_value": 6,
+            "historic_district": 6,
+            "overlay_zoning": 10,
+            "bedrooms": 1,
+            "vacant": 0,
+            "total": 9
+        },
+        "style": {
+            "weight": 1,
+            "color": "#ff0000"
+        }
+    },
+	
+	{
+		"type": "Feature",
+        "map_par_id": "11_13_1",
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        -70.5617658228544,
+                        41.4039349825164
+                    ],
+                    [
+                        -70.5618322279667,
+                        41.4038714942079
+                    ],
+                    [
+                        -70.5622047209474,
+                        41.404040612218
+                    ],
+                    [
+                        -70.5621409281984,
+                        41.4041009664685
+                    ],
+                    [
+                        -70.5617658228544,
+                        41.4039349825164
+                    ]
+                ]
+            ]
+        },
+        "bldg_val": 0,
+        "res_score": 8,
+        "label": "R-20",
+        "sewered": null,
+        "townwater": null,
+        "sqfeet": 3404.5194213756,
+        "acres": 0.07815701151,
+        "av_score": 10,
+        "in_historic_district": null,
+        "in_overlay_zone": null,
+        "type": "Feature",
+        "properties": {
+            "info": "<p><strong>Address</strong>: 39 TWENTY SECOND ST S<br /><strong>Map & Lot ID</strong>: 11_13_1<br /><strong>Zone Code</strong>:89R-20<br /><strong>Assessed value</strong>: $20,000</p><p>Bedrooms: 0</p><p><strong>Vacant Lot</strong></p><h6>Parcel Scores</h6><table class='map_scores'><thead><tr><th>Score Factor</th><th class='score'>Score</th></tr></thead><tbody><tr><td>Zoning</td><td>8</td></tr><tr><td>Bedrooms</td><td>0</td></tr><tr><td>Vacant Lot</td><td>8</td></tr><tr><td>Sewer</td><td>0</td></tr><tr><td>Town Water</td><td>0</td></tr><tr><td><strong>Total Score</strong></td><td><strong>16</strong></td></tr></tbody></table>"
+        },
+        "details": {
+            "loc_id": "M_278439_795302",
+            "town_id": "89",
+            "address": "39 TWENTY SECOND ST S",
+            "map_lot_id": "11_13_1",
+            "zoning": "89R-20",
+            "total_val": 20000,
+            "acres": 0.07815701151
+        },
+        "scores": {
+            "zoning": 8,
+            "sewer": 0,
+            "townwater": 0,
+            "assessed_value": 10,
+            "historic_district": 6,
+            "overlay_zoning": 10,
+            "bedrooms": 0,
+            "vacant": 8,
+            "total": 16
+        },
+        "style": {
+            "weight": 1,
+            "color": "#ff000"
+        }
+    
+}]
+}
